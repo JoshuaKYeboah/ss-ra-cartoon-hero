@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Style Test</title>
+	<!-- (in the head element, we can use ruleset styling) with the style element instead of the style attribute -->
+	<!-- the ruleset is good and neater for changing a lot of the same element at once -->
+	<!-- when you do inspect element and would like to change the styling of something that you've applied a ruleset to, it will change all those elements (unlike inline styling) -->
+	<!-- <style type="text/css">
+		/*the type is just css (not rlly needed but good to be specific)*/
+	</style> -->
+
+	<!-- instead of using the style element, use link to apply css file to this 
+	relation, type of document and hypertext (absolute or relative url for a style sheet) -->
+	<link rel="stylesheet" type="text/css" href="css/style-test.css">
+
+</head>
+<body>
+<!-- Once you add the style attribute, you can style appropriately. always use a semi-colon after it. below is inline styling (a bit messy) -->
+	<span>Span Element</span>
+	<h1 class="big uppercase"><span>Heading 1</span> -1</h1>
+	<!-- you can combine class ruleset stylings -->
+	<!-- span element is a blank box by default with no default styles and inherits the text styles of the element of which it is inside -->
+	<h1 clas="uppercase">Heading 1 - 2</h1>
+	<h1>Heading 1 - 3</h1>
+	<!-- rulesets are neater -->
+
+
+	<h2 style="color: magenta;" class="big">Heading 2 - 1</h2>
+	<h2 style="font-size: 20px; color: magenta;"class="big">Heading 2 - 2</h2>
+	<!-- big class won't work here because we've used inline styling for the font-size -->
+	<h2 style="font-size: 20px; color: magenta;" class="uppercase">Heading 2 - 3</h2>
+
+</body>
+</html>

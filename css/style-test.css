@@ -1,0 +1,38 @@
+body{
+	background-color: lightgoldenrodyellow;
+}
+h1 /*selective statement to target a group of elements to style*/{
+	font-size:30px; 
+	color: teal;
+	/*between the braces is the declaration block and each line is a declaration with a declaration property and value*/
+}
+
+h2{
+	color: teal;
+/*when you do ruleset and inline styling of the same element, they combine and not cancel out unless there is a conflict with the same property*/
+/*(you can overwrite specifics if you want because the more specific style (inline) takes precedence)*/
+/*in inspect element, the overwritten ruleset will be shown with a strikethrough. if you uncheck the specific colour, it will show the underlying ruleset colour*/
+}
+h1{
+	color: #04C68C;
+	/*if there's a conflict of rulesets, the one that was written last takes precedence*/
+}
+
+/*you can ruleset specific elements of the same class by using the .classname for the selective statement*/
+.big{
+	font-size: 60px;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+/*you can have rulesets for combined classes with .classname1.classname2 as the selective statement*/
+.big.uppercase{
+	color: navy;
+}
+
+/*you can do rulesets for specific  span elements inside of other elements*/
+h1 span{
+	color: violet;
+}

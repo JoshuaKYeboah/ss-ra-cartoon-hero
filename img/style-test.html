@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Style Test</title>
+	<!-- (in the head element, we can use ruleset styling) with the style element instead of the style attribute -->
+	<!-- the ruleset is good and neater for changing a lot of the same element at once -->
+	<!-- when you do inspect element and would like to change the styling of something that you've applied a ruleset to, it will change all those elements (unlike inline styling) -->
+	<style type="text/css">
+		/*the type is just css (not rlly needed but good to be specific)*/
+		h1 /*selective statement to target a group of elements to style*/{
+			font-size:30px; 
+			color: teal;
+			/*between the braces is the declaration block and each line is a declaration with a declaration property and value*/
+		}
+		
+		h2{
+			color: teal;
+		/*when you do ruleset and inline styling of the same element, they combine and not cancel out unless there is a conflict with the same property*/
+		/*(you can overwrite specifics if you want because the more specific style (inline) takes precedence)*/
+		/*in inspect element, the overwritten ruleset will be shown with a strikethrough. if you uncheck the specific colour, it will show the underlying ruleset colour*/
+		}
+		h1{
+			color: #04C68C;
+			/*if there's a conflict of rulesets, the one that was written last takes precedence*/
+		}
+
+		/*you can ruleset specific elements of the same class by using the .classname for the selective statement*/
+		.big{
+			font-size: 60px;
+		}
+
+		.uppercase{
+			text-transform: uppercase;
+		}
+
+		/*you can have rulesets for combined classes with .classname1.classname2 as the selective statement*/
+		.big.uppercase{
+			color: navy;
+		}
+	</style>
+</head>
+<body>
+<!-- Once you add the style attribute, you can style appropriately. always use a semi-colon after it. below is inline styling (a bit messy) -->
+	<span>Span Element</span>
+	<h1 class="big uppercase"><span>Heading 1</span> -1</h1>
+	<!-- you can combine class ruleset stylings -->
+	<!-- span element is a blank box by default with no default styles and inherits the text styles of the element of which it is inside -->
+	<h1 clas="uppercase">Heading 1 - 2</h1>
+	<h1>Heading 1 - 3</h1>
+	<!-- rulesets are neater -->
+
+
+	<h2 style="color: magenta;" class="big">Heading 2 - 1</h2>
+	<h2 style="font-size: 20px; color: magenta;"class="big">Heading 2 - 2</h2>
+	<!-- big class won't work here because we've used inline styling for the font-size -->
+	<h2 style="font-size: 20px; color: magenta;" class="uppercase">Heading 2 - 3</h2>
+
+</body>
+</html>
