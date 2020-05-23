@@ -5,14 +5,39 @@
 	<!-- (in the head element, we can use ruleset styling) with the style element instead of the style attribute -->
 	<!-- the ruleset is good and neater for changing a lot of the same element at once -->
 	<!-- when you do inspect element and would like to change the styling of something that you've applied a ruleset to, it will change all those elements (unlike inline styling) -->
-	<!-- <style type="text/css">
+	<style type="text/css">
 		/*the type is just css (not rlly needed but good to be specific)*/
-	</style> -->
+		h1 /*selective statement to target a group of elements to style*/{
+			font-size:30px; 
+			color: teal;
+			/*between the braces is the declaration block and each line is a declaration with a declaration property and value*/
+		}
+		
+		h2{
+			color: teal;
+		/*when you do ruleset and inline styling of the same element, they combine and not cancel out unless there is a conflict with the same property*/
+		/*(you can overwrite specifics if you want because the more specific style (inline) takes precedence)*/
+		/*in inspect element, the overwritten ruleset will be shown with a strikethrough. if you uncheck the specific colour, it will show the underlying ruleset colour*/
+		}
+		h1{
+			color: #04C68C;
+			/*if there's a conflict of rulesets, the one that was written last takes precedence*/
+		}
 
-	<!-- instead of using the style element, use link to apply css file to this 
-	relation, type of document and hypertext (absolute or relative url for a style sheet) -->
-	<link rel="stylesheet" type="text/css" href="css/style-test.css">
+		/*you can ruleset specific elements of the same class by using the .classname for the selective statement*/
+		.big{
+			font-size: 60px;
+		}
 
+		.uppercase{
+			text-transform: uppercase;
+		}
+
+		/*you can have rulesets for combined classes with .classname1.classname2 as the selective statement*/
+		.big.uppercase{
+			color: navy;
+		}
+	</style>
 </head>
 <body>
 <!-- Once you add the style attribute, you can style appropriately. always use a semi-colon after it. below is inline styling (a bit messy) -->
