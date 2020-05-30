@@ -13,6 +13,10 @@ header {
 	padding-bottom: 50px; /*space of 50px at the bottom, but comes in at the same colour as the background for the header*/
 }
 
+header a:hover{
+	background-color: transparent;
+}
+
 header h1 {
 	color: #FFFB00; /*colour of h1 text*/ 
 	font-size: 60px;
