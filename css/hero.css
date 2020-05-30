@@ -1,0 +1,76 @@
+body{
+	margin: 0; /*brings everything as far left as possible*/
+	font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif; /*you don't really need the inverted commas*//*if you specify a font that isn't on the end-user's computer, it will not show up, so you must supply a few fonts that will show up if they dont have the previous*/
+	/*you can use 'web fonts' that will show up whether the user has them on their computer or not*/
+	font-size: 20px;
+	line-height: 30px; /*makes text more legible*/
+}
+
+header {
+	background-color: #FF0000; /*background colour*/
+	text-align: center; /*aligns text to the centre of the page*/
+	padding-top: 50px; /*space of 50px at the top, but comes in at the same colour as the background for the header*/
+	padding-bottom: 50px; /*space of 50px at the bottom, but comes in at the same colour as the background for the header*/
+}
+
+header h1 {
+	color: #FFFB00; /*colour of h1 text*/ 
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 40px;
+	color: #E50000;
+	margin: 40px 0 10px
+}
+
+h1,h2{
+	font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif; /*Turns all h1 and h2 elements to this web font. if it is unable to do so, it will use the other ones*/
+}
+
+header img {
+	border-radius: 175px; /*size of radius around image (curves the image)*/
+	width: 350px; /*morphs width of image*/
+    height: 300px; /*morphs height of image*/
+    border: 15px solid #FFFB00; /*creates solid boarder around image and adds colour*/
+}
+
+main {
+	max-width: 800px; /*Scales the width of the elements in main*/
+	margin: 0 auto; /*instead of doing margin top, bottom, left, right*//*Top and bottom have no margin but the left and right have automatic margins to centre elements*/
+	padding:20px; /*instead of doing padding top right bottom left*/
+	/*alternative ^^ padding: 0 20px 0 20px*/
+}
+
+main img {
+	max-width: 100%; /*Scales the images inside of main to the width of the main (set above). height automatically scales too*/
+}
+
+a{
+	color:#E50000;
+}
+
+a:hover{ /*hover pseudo class declaring that when we hover over any a class, it will change colour*/
+	color: #FFB000;
+	background-color: black;
+}
+
+footer{
+	padding: 10px 20px 10px 20px;
+	background-color: #FF0000;
+}
+
+footer a{
+	color: black;
+}
+
+footer a:hover{
+	opacity: .9; /*closer to 1 means more solid lesser transparent*/
+	background-color: transparent;
+}
+
+p.caption{
+	color: #999999;
+	font-style: italic;
+	margin-top: 0;
+}
